@@ -1,21 +1,3 @@
-Title:  TL-WR1502X v1.0 — Tether TDP authentication token derived from a public device identifier
-
-Summary:
-The TDP protocol daemon (`tdpServer`) computes the Tether authentication token as
-MD5("TETHER_KEY_V1_" + DEV_ID). DEV_ID is a 6-byte factory identifier that the router
-discloses to any LAN client in its own discovery response (field 9), alongside the token
-itself (field 16). A per-device secret partition (`tss_key`) exists but is unused. Result:
-any LAN-adjacent attacker can forge authenticated TDP requests, including VPN server
-account creation and Wi-Fi configuration changes.
-
-Affected:  TL-WR1502X v1.0, firmware 1.2.11 Build 20251009 rel.56489(4555)
-Component: usr/bin/tdpServer
-Severity:  High (~8.1, AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
-CWE:       CWE-330 (Use of Insufficiently Random Values), CWE-287 (Improper Authentication)
-```
-
----
-
 # Deliverable 2 — Rebuttal template for vendor disputes
 
 Use these in order of likelihood. Each addresses a specific pushback.
