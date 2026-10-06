@@ -624,7 +624,3 @@ Affiliation: Independent researcher
 
 Disclosure submitted to TP-Link Product Security (`security@tp-link.com`),
 requesting coordinated disclosure with 90-day timeline.
-
-```bash
-cp crypto.lua /tmp/crypto.fixed.lua
-printf '\x00' | dd of=/tmp/crypto.fixed.lua bs=1 seek=11 count=1 conv=notrunc
